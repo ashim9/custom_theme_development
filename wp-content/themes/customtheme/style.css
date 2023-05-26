@@ -4,3 +4,26 @@ Author:  Ashim Shil
 Description: Fancy Custom Theme
 Version: 1.0
 */
+
+ul,li{
+    padding: 0;
+    margin: 0;
+}
+
+ul#menu-header-menu {
+    display: flex;
+    list-style: none;
+}
+ul#menu-header-menu li{
+    margin-right: 10px;
+}
+ul#menu-header-menu li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    padding: 10px;
+    background: gray;
+}
+.heading{
+    color: green;
+}

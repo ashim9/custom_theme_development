@@ -1,9 +1,9 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
+<div>
+    <h1 class="heading">This is custom theme</h1>
+</div>
 
-<h1>This is custom theme........</h1>
 
-<?php 
-get_footer() 
-?>
+
+
+
