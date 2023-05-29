@@ -36,7 +36,7 @@ ul#menu-header-menu li a:hover{
     color: green;
 }
 .navbar{
-    background-color: darkgray;
+    background-color:rgba(0,0,0,.7);
 }
 .container{
     max-width: 1240px;
@@ -119,6 +119,51 @@ body .banner_gallery_card{
 .banner_gallery_card .banner-gallery:nth-of-type(2){
     margin: 0 6px;
 }
+
+body .loge-service-section {
+    margin: 87px 0 93px 0;
+}
+body .loge-service-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 107px;
+}
+
+.loge-service-section .loge-service-card-wrapper {
+    display: flex;
+}
+.loge-service-card-wrapper ul li::before {
+    content: '';
+    background: url('./assets/img/tick.svg');
+    width: 15px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 13px;
+}
+.loge-service-card-wrapper ul li{
+    list-style: none;
+}
+.loge_service_card_descriptions{
+    max-width: 238px;
+    width: 100%;
+}
+.loge-service-card:nth-of-type(1){
+    margin-right: 37px;
+}
+.loge-service-card:nth-of-type(2){
+    margin-right: 53px;
+}
+.loge-service-card:nth-of-type(3){
+    margin-right: 103px;
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 768px) {
     .banner-contents{
         padding: 205px 0 136px 0;
