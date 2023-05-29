@@ -4,7 +4,7 @@ Author:  Ashim Shil
 Description: Fancy Custom Theme
 Version: 1.0
 */
-html, body, ul,li {
+html, body, ul,li,p,h1,h2,h3 {
     margin: 0;
     padding: 0;
 }
@@ -39,7 +39,7 @@ ul#menu-header-menu li a:hover{
     background-color: darkgray;
 }
 .container{
-    max-width: 1080px;
+    max-width: 1240px;
     width: 100%;
     margin: 0 auto;
 }
@@ -57,4 +57,63 @@ ul#menu-header-menu li a:hover{
 }
 .navbar .navbar_left-logo img{
     width: 100%;
+}
+.banner-btn{
+    display: flex;
+}
+
+.banner-btn a{
+    text-decoration: none;
+    background: #FCBF1B;
+    border-radius: 2px;
+    padding: 16px 24px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222222;
+}
+.banner-contents{
+    padding: 229px 0 49px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.banner-contents h2{
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 66px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.banner-contents p{
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 29px 0 46px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner-contents{
+        padding: 205px 0 136px 0;
+    }
+    .banner-contents h2{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .banner-contents p{
+        font-size: 14px;
+        line-height: 36px;
+        margin: 29px 0 24px 0;
+    }
+    .banner-btn a{
+        padding: 16px 26px;
+
+    }
+
 }
