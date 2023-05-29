@@ -6,6 +6,9 @@ function register_menus(){
     ));
 }
 
+add_action( 'init', 'register_menus' );
+
+
 function wp_register_styles(){
     wp_enqueue_style('stylesheet', get_template_directory_uri() . "./style.css", 'all');
 }

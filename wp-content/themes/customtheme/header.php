@@ -8,10 +8,18 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <div>
-        <?php 
-            wp_nav_menu(array('theme-location'=>'header-menu','menu_class' => 'header_menu',));
-         ?>
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-inner-content">
+                <div class="navbar_left-logo">
+                <a href=""><img src="<?php echo get_template_directory_uri();?>/assets/img/nav-logo.png" alt=""></a>
+                </div>
+                <?php if(has_nav_menu('header-menu')){
+                    wp_nav_menu(array('theme-location'=>'header-menu','menu_class' => 'header_menu')); 
+                }
+                ?>
+            </div>
+        </div>
     </div>
 </body>
 </html>

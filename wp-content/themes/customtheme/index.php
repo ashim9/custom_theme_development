@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<div>
+<main>
     <h1 class="heading">This is custom theme</h1>
-</div>
+</main>
 
 
 
