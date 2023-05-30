@@ -10,7 +10,7 @@ html, body, ul,li,p,h1,h2,h3 {
 }
 *{
     box-sizing: border-box;
-    font-family: 'Open Sans';
+    font-family: 'Mulish';
 }
 
 ul#menu-header-menu {
@@ -96,7 +96,6 @@ body .banner-contents p{
     color: #FFFFFF;
     margin: 29px 0 46px 0;
 }
-
 body .banner_gallery_card{
     display: flex;
     margin-top: 6px;
@@ -119,7 +118,6 @@ body .banner_gallery_card{
 .banner_gallery_card .banner-gallery:nth-of-type(2){
     margin: 0 6px;
 }
-
 body .loge-service-section {
     margin: 87px 0 93px 0;
 }
@@ -128,7 +126,31 @@ body .loge-service-title {
     align-items: center;
     margin-bottom: 107px;
 }
+body .loge-service-title h3{
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #222222; 
+    margin-right: 187px;
+}
+.loge-service-subtitle span{
+    width: 4px;
+    height: 31px;
+    background: #FCBF1B;
+    display: block;
+    margin-right: 24px;
+}
 
+body .loge-service-subtitle{
+    display: flex;
+}
+body .loge-service-subtitle p{
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 31px;
+    color: #222222;
+}
 .loge-service-section .loge-service-card-wrapper {
     display: flex;
 }
@@ -143,26 +165,38 @@ body .loge-service-title {
 .loge-service-card-wrapper ul li{
     list-style: none;
 }
-.loge_service_card_descriptions{
-    max-width: 238px;
+.loge-service-card-wrapper ul li:not(:last-child){
+    padding-bottom: 17px;
+}
+.loge-service-card .loge-service-card-title{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #222222;
+    margin: 20px 0 21px 0 ;
+}
+.loge-service-card .loge_service_card_descriptions{
+    max-width: 240px;
     width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7F7F7F;
 }
-.loge-service-card:nth-of-type(1){
-    margin-right: 37px;
+.loge-service-card-wrapper .loge-service-card:nth-of-type(2){
+    margin: 0 53px 0 37px;
 }
-.loge-service-card:nth-of-type(2){
-    margin-right: 53px;
-}
-.loge-service-card:nth-of-type(3){
+.loge-service-card-wrapper .loge-service-card:nth-of-type(3){
     margin-right: 103px;
 }
 
 
 
-
-
-
-
+@media only screen and (max-width: 1024px) {
+    .container{
+        padding: 0 20px;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .banner-contents{
@@ -188,5 +222,30 @@ body .loge-service-title {
     }
     .banner_gallery_card .banner-gallery:nth-of-type(2){
         margin: 6px 0;
+    }
+    body .loge-service-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    body .loge-service-title h3 {
+        margin: 0 0 20px;
+    }
+    body  .loge-service-subtitle p{
+        font-size: 14px;
+    }
+    body .loge-service-title {
+        margin-bottom: 40px;
+    }
+    .loge-service-section .loge-service-card-wrapper {
+        flex-direction: column;
+    }
+    .loge-service-section .loge-service-card-wrapper .loge-service-card {
+        margin: 0 0 30px;
+    }
+    .loge-service-card .loge_service_card_descriptions {
+        max-width: 100%;
+    }
+    .loge-service-card .loge-service-card-title {
+        margin: 20px 0 11px 0;
     }
 }

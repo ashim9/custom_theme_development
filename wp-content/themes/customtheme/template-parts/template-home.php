@@ -58,7 +58,10 @@ get_header();
                     <h3><?php echo $loge_service_title ?></h3>
                 <?php endif; ?>
                 <?php if(isset($loge_service_subtitle)): ?>
-                    <p><?php echo $loge_service_subtitle ?></p>
+                    <div class="loge-service-subtitle">
+                        <span></span>
+                        <p><?php echo $loge_service_subtitle ?></p>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="loge-service-card-wrapper">
@@ -69,7 +72,7 @@ get_header();
                                 <img src="<?php echo $loge_service_cards['loge_service_card_icon'] ?>" alt="">
                             <?php endif; ?>
                             <?php if(isset($loge_service_cards['loge_service_card_title'])): ?>
-                                <p><?php echo $loge_service_cards['loge_service_card_title']?></p>
+                                <p class="loge-service-card-title"><?php echo $loge_service_cards['loge_service_card_title']?></p>
                             <?php endif; ?>
                             <?php if(isset($loge_service_cards['loge_service_card_descriptions'])): ?>
                                 <p class="loge_service_card_descriptions"><?php echo $loge_service_cards['loge_service_card_descriptions']?></p>
