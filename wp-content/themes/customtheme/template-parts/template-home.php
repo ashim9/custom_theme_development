@@ -1,9 +1,7 @@
 <?php
-
 /*
 * Template Name: Home page
 */
-
 get_header();
 
 ?>
@@ -44,6 +42,25 @@ get_header();
                 <?php endif; ?>
             </div>
         </div>
+        <div class="phone-banner" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('<?php echo $home_banner_contents['home_banner_phone'] ?>')no-repeat;background-size:cover">
+            <div class="banner-contents">
+                <?php if(isset($home_banner_contents['home_banner_header'])): ?>
+                    <h2><?php echo $home_banner_contents['home_banner_header'] ?></h2>
+                <?php endif; ?>
+                <?php if(isset($home_banner_contents['home_banner_subheader'])): ?>
+                    <p><?php echo $home_banner_contents['home_banner_subheader'] ?></p>
+                <?php endif; ?>
+                <?php if( $home_banner_contents['home_banner_btn_text'] ):
+                        $link_url = $home_banner_contents['home_banner_btn_text']['url'];
+                        $link_title = $home_banner_contents['home_banner_btn_text']['title'];
+                        $link_target = $home_banner_contents['home_banner_btn_text']['target'] ? $link['target'] : '_self';
+                    ?>
+                    <div class="banner-btn">
+                        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
     <?php endif; ?>
     <?php if(isset($banner_gallery_card)): ?>
         <div class="banner_gallery_card">
@@ -66,7 +83,7 @@ get_header();
                         <h3><?php echo $loge_service_title ?></h3>
                     <?php endif; ?>
                     <?php if(isset($loge_service_subtitle)): ?>
-                        <div class="loge-service-subtitle">
+                        <div class="service-subtitle">
                             <span></span>
                             <p><?php echo $loge_service_subtitle ?></p>
                         </div>
@@ -100,6 +117,7 @@ get_header();
         </div>
     </div>
     <!-- ............ loge service section end .............. -->
+    <!-- ............ our service section start .............. -->
     <div class="our-service-section-wrappper">
         <div class="our-service-section">
             <div class="container">
@@ -108,7 +126,7 @@ get_header();
                         <h3><?php echo $our_services_title ?></h3>
                     <?php endif; ?>
                     <?php if(isset($our_services_subtitle)): ?>
-                        <div class="our-service-subtitle loge-service-subtitle">
+                        <div class="service-subtitle">
                             <span></span>
                             <p><?php echo $our_services_subtitle ?></p>
                         </div>
@@ -148,6 +166,11 @@ get_header();
             </div>
         </div>
     </div>
+    <!-- ............ our service section end .............. -->
+
+    <!-- ............ Vehicle fleet section start .............. -->
+
+    <!-- ............ Vehicle fleet section end .............. -->
 </main>
 
 <?php get_footer(); ?>

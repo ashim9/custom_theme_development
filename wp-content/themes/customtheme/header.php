@@ -12,18 +12,45 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <div class="navbar">
+    <nav class="topbar">
         <div class="container">
-            <div class="navbar-inner-content">
-                <div class="navbar_left-logo">
-                <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri();?>/assets/img/nav-logo.png" alt=""></a>
+            <div class="topbar-contents">
+                <div class="topbar-left">
+                    <a href="<?php echo esc_url(home_url('/'))?>"></a><img src="<?php echo get_template_directory_uri();?>/assets/img/logeServicIcon.svg" alt="logeservice logo">
                 </div>
+                <div class="topobar-right">
+                    <div class="phone-btn">
+                        <a href="tel:+001 234 7890"> <img src="<?php echo get_template_directory_uri();?>/assets/img/callICon.svg" alt="call icon"> +001 234 7890</a>
+                    </div>
+                    <div class="quote-btn">
+                    <p><img src="<?php echo get_template_directory_uri();?>/assets/img/quoteIcon.svg" alt="quote icon">Request for quote</p>
+                    </div>
+                    <div class="search-icon">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/searchIcon.svg" alt="serach icon">
+                    </div>
+                    <div class="burger-menu">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/burger-menu-icon.svg" alt="burger-menu">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <!-- <div class="navbar_left-logo">
+                <a href="<?php //echo esc_url(home_url('/')); ?>"><img src="<?php //echo get_template_directory_uri();?>/assets/img/nav-logo.png" alt=""></a>
+                </div> -->
                 <?php if(has_nav_menu('header-menu')){
                     wp_nav_menu(array('theme-location'=>'header-menu','menu_class' => 'header_menu')); 
                 }
                 ?>
             </div>
         </div>
-    </div>
+    </nav>
 </body>
 </html>
+
+<script>
+    let hamburger = document.querySelector('.topobar-right .burger-menu');
+    hamburger.addEventListener('click', (e)=>{
+        let navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+    });
+</script>
