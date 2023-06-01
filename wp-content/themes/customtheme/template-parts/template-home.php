@@ -169,8 +169,55 @@ get_header();
     <!-- ............ our service section end .............. -->
 
     <!-- ............ Vehicle fleet section start .............. -->
+    <div class="our-service-section-wrappper">
+    <div class="our-service-section">
+        <div class="container">
+            <div class="our-service-title">
+                <?php if(isset($our_services_title)):?>
+                    <h3><?php echo $our_services_title ?></h3>
+                <?php endif; ?>
+                <?php if(isset($our_services_subtitle)): ?>
+                    <div class="service-subtitle">
+                        <span></span>
+                        <p><?php echo $our_services_subtitle ?></p>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <?php if(isset($our_services_card)): ?>
+                <div class="our-service-card-wrapper">
+                    <?php foreach($our_services_card as $our_services_cards) {?>
+                            <div class="our-service-card">
+                            <?php if(isset($our_services_cards['our_services_card_image'])): ?>
+                                <div class="our-service-card-img">
+                                    <img src="<?php echo $our_services_cards['our_services_card_image']; ?>" alt="">
+                                </div>
+                            <?php endif; ?>
+                            <div class="our-service-card-contents">
+                                <?php if(isset($our_services_cards['our_services_card_title'])): ?>
+                                    <h3><?php echo $our_services_cards['our_services_card_title']; ?></h3>
+                                <?php endif; ?>
+                                <?php if(isset($our_services_cards['our_services_card_subtitle'])): ?>
+                                    <p><?php echo $our_services_cards['our_services_card_subtitle']; ?></p>
+                                <?php endif; ?>
+                                <?php if($our_services_cards['our_services_card_btn']): 
+                                    $our_services_link_url = $our_services_cards['our_services_card_btn']['url'];
+                                    $our_services_link_title = $our_services_cards['our_services_card_btn']['title'];
+                                    $our_services_link_target = $our_services_cards['our_services_card_btn']['target'] ? $link['target'] : '_self';
 
-    <!-- ............ Vehicle fleet section end .............. -->
+                                    ?>
+                                    <div class="service-btn">
+                                        <a href="<?php echo esc_url( $our_services_link_url ); ?>" target="<?php echo esc_attr( $our_services_link_target ); ?>"><?php echo esc_html( $our_services_link_title ); ?></a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            </div>
+                    <?php } ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+<!-- ............ Vehicle fleet section end .............. -->
 </main>
 
 <?php get_footer(); ?>
