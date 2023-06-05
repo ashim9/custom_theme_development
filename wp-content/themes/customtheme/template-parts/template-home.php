@@ -16,10 +16,17 @@ get_header();
 
     $our_services_title = get_field('our_services_title');
     $our_services_subtitle = get_field('our_services_subtitle');
-    $our_services_card = get_field('our_services_card');
-    $our_services_card_btn = get_field('our_services_card_btn');
+    $services_card = get_field('services_card');
+    $our_services_card_btn = get_field('services_card_btn');
+    $vehicle_fleet_services_card = get_field('vehicle_fleet_services_card');
+    $vehicle_fleet_title = get_field('vehicle_fleet_title');
+    $vehicle_fleet_subtitle = get_field('vehicle_fleet_subtitle');
+    $news_and_info_card = get_field('news_and_info_card');
+    $news_and_info_title = get_field('news_and_info_title');
+    $news_and_info_subtitle = get_field('news_and_info_subtitle');
+    $news_and_info_more_article = get_field('news_and_info_more_article');
+    $more_article_button = get_field('more_article_button');
 ?>   
-
 <main>
     <!-- ............ banner start ............  -->
     <?php if(isset($home_banner_contents)):?>
@@ -132,27 +139,26 @@ get_header();
                         </div>
                     <?php endif; ?>
                 </div>
-                <?php if(isset($our_services_card)): ?>
-                    <div class="our-service-card-wrapper">
-                        <?php foreach($our_services_card as $our_services_cards) {?>
-                             <div class="our-service-card">
-                                <?php if(isset($our_services_cards['our_services_card_image'])): ?>
-                                    <div class="our-service-card-img">
-                                        <img src="<?php echo $our_services_cards['our_services_card_image']; ?>" alt="">
+                <?php if(isset($services_card)): ?>
+                    <div class="service-card-wrapper">
+                        <?php foreach($services_card as $services_cards) {?>
+                             <div class="service-card">
+                                <?php if(isset($services_cards['services_card_image'])): ?>
+                                    <div class="service-card-img">
+                                        <img src="<?php echo $services_cards['services_card_image']; ?>" alt="">
                                     </div>
                                 <?php endif; ?>
-                                <div class="our-service-card-contents">
-                                    <?php if(isset($our_services_cards['our_services_card_title'])): ?>
-                                        <h3><?php echo $our_services_cards['our_services_card_title']; ?></h3>
+                                <div class="service-card-contents">
+                                    <?php if(isset($services_cards['services_card_title'])): ?>
+                                        <h3><?php echo $services_cards['services_card_title']; ?></h3>
                                     <?php endif; ?>
-                                    <?php if(isset($our_services_cards['our_services_card_subtitle'])): ?>
-                                        <p><?php echo $our_services_cards['our_services_card_subtitle']; ?></p>
+                                    <?php if(isset($services_cards['services_card_subtitle'])): ?>
+                                        <p><?php echo $services_cards['services_card_subtitle']; ?></p>
                                     <?php endif; ?>
-                                    <?php if($our_services_cards['our_services_card_btn']): 
-                                        $our_services_link_url = $our_services_cards['our_services_card_btn']['url'];
-                                        $our_services_link_title = $our_services_cards['our_services_card_btn']['title'];
-                                        $our_services_link_target = $our_services_cards['our_services_card_btn']['target'] ? $link['target'] : '_self';
-
+                                    <?php if($services_cards['services_card_btn']): 
+                                        $our_services_link_url = $services_cards['services_card_btn']['url'];
+                                        $our_services_link_title = $services_cards['services_card_btn']['title'];
+                                        $our_services_link_target = $services_cards['services_card_btn']['target'] ? $services_cards['services_card_btn']['target'] : '_self';
                                         ?>
                                         <div class="service-btn">
                                             <a href="<?php echo esc_url( $our_services_link_url ); ?>" target="<?php echo esc_attr( $our_services_link_target ); ?>"><?php echo esc_html( $our_services_link_title ); ?></a>
@@ -173,37 +179,36 @@ get_header();
     <div class="our-service-section">
         <div class="container">
             <div class="our-service-title">
-                <?php if(isset($our_services_title)):?>
-                    <h3><?php echo $our_services_title ?></h3>
+                <?php if(isset($vehicle_fleet_title)):?>
+                    <h3><?php echo $vehicle_fleet_title ?></h3>
                 <?php endif; ?>
-                <?php if(isset($our_services_subtitle)): ?>
+                <?php if(isset($vehicle_fleet_subtitle)): ?>
                     <div class="service-subtitle">
                         <span></span>
-                        <p><?php echo $our_services_subtitle ?></p>
+                        <p><?php echo $vehicle_fleet_subtitle ?></p>
                     </div>
                 <?php endif; ?>
             </div>
-            <?php if(isset($our_services_card)): ?>
-                <div class="our-service-card-wrapper">
-                    <?php foreach($our_services_card as $our_services_cards) {?>
-                            <div class="our-service-card">
-                            <?php if(isset($our_services_cards['our_services_card_image'])): ?>
-                                <div class="our-service-card-img">
-                                    <img src="<?php echo $our_services_cards['our_services_card_image']; ?>" alt="">
+            <?php if(isset($vehicle_fleet_services_card)): ?>
+                <div class="service-card-wrapper">
+                    <?php foreach($vehicle_fleet_services_card as $vehicle_fleet_services_cards) {?>
+                    <div class="service-card">
+                            <?php if(isset($vehicle_fleet_services_cards['vehicle_fleet_services_card_image'])): ?>
+                                <div class="service-card-img">
+                                    <img src="<?php echo $vehicle_fleet_services_cards['vehicle_fleet_services_card_image']; ?>" alt="">
                                 </div>
                             <?php endif; ?>
-                            <div class="our-service-card-contents">
-                                <?php if(isset($our_services_cards['our_services_card_title'])): ?>
-                                    <h3><?php echo $our_services_cards['our_services_card_title']; ?></h3>
+                            <div class="service-card-contents">
+                                <?php if(isset($vehicle_fleet_services_cards['vehicle_fleet_services_card_title'])): ?>
+                                    <h3><?php echo $vehicle_fleet_services_cards['vehicle_fleet_services_card_title']; ?></h3>
                                 <?php endif; ?>
-                                <?php if(isset($our_services_cards['our_services_card_subtitle'])): ?>
-                                    <p><?php echo $our_services_cards['our_services_card_subtitle']; ?></p>
+                                <?php if(isset($vehicle_fleet_services_cards['vehicle_fleet_services_card_subtitle'])): ?>
+                                    <p><?php echo $vehicle_fleet_services_cards['vehicle_fleet_services_card_subtitle']; ?></p>
                                 <?php endif; ?>
-                                <?php if($our_services_cards['our_services_card_btn']): 
-                                    $our_services_link_url = $our_services_cards['our_services_card_btn']['url'];
-                                    $our_services_link_title = $our_services_cards['our_services_card_btn']['title'];
-                                    $our_services_link_target = $our_services_cards['our_services_card_btn']['target'] ? $link['target'] : '_self';
-
+                                <?php if($vehicle_fleet_services_cards['vehicle_fleet_services_card_button']): 
+                                    $our_services_link_url = $vehicle_fleet_services_cards['vehicle_fleet_services_card_button']['url'];
+                                    $our_services_link_title = $vehicle_fleet_services_cards['vehicle_fleet_services_card_button']['title'];
+                                    $our_services_link_target = $vehicle_fleet_services_cards['vehicle_fleet_services_card_button']['target'] ? $vehicle_fleet_services_cards['vehicle_fleet_services_card_button']['target'] : '_self';
                                     ?>
                                     <div class="service-btn">
                                         <a href="<?php echo esc_url( $our_services_link_url ); ?>" target="<?php echo esc_attr( $our_services_link_target ); ?>"><?php echo esc_html( $our_services_link_title ); ?></a>
@@ -218,6 +223,73 @@ get_header();
     </div>
 </div>
 <!-- ............ Vehicle fleet section end .............. -->
+<!-- ............ News & Info section start .............. -->
+<div class="news-and-info-section-wrappper">
+    <div class="our-service-section">
+        <div class="container">
+            <div class="our-service-title">
+                <?php if(isset($news_and_info_title)):?>
+                    <h3><?php echo $news_and_info_title ?></h3>
+                <?php endif; ?>
+                <?php if(isset($news_and_info_subtitle)): ?>
+                    <div class="service-subtitle">
+                        <span></span>
+                        <p><?php echo $news_and_info_subtitle ?></p>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <div class="news-and-info-card">
+                <?php if(isset($news_and_info_card)): ?>
+                    <div class="service-card-wrapper">
+                        <?php foreach($news_and_info_card as $news_and_info_cards) {?>
+                                <div class="service-card">
+                                    <?php if(isset($news_and_info_cards['news_and_info_card_image'])): ?>
+                                        <div class="service-card-img">
+                                            <img src="<?php echo $news_and_info_cards['news_and_info_card_image']; ?>" alt="">
+                                        </div>
+                                    <?php endif; ?>
+                                    <div class="service-card-contents">
+                                        <?php if(isset($news_and_info_cards['news_and_info_card_title'])): ?>
+                                            <h3><?php echo $news_and_info_cards['news_and_info_card_title']; ?></h3>
+                                        <?php endif; ?>
+                                        <?php if(isset($news_and_info_cards['news_and_info_card_date'])): ?>
+                                            <p><?php echo $news_and_info_cards['news_and_info_card_date']; ?></p>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                        <?php } ?>
+                        <?php if(isset($news_and_info_more_article)): ?>
+                            <div class="more-article-wrapper">
+                                <?php foreach($news_and_info_more_article as $more_articles ) {?>
+                                    <div class="more-article">
+                                        <?php if( $more_articles['news_and_info_more_article_title']):?>
+                                            <h3><?php echo $more_articles['news_and_info_more_article_title']; ?> </h3>
+                                        <?php endif; ?>
+                                        <?php if($more_articles['news_and_info_more_article_date']): ?>
+                                            <p><?php echo $more_articles['news_and_info_more_article_date']; ?></p>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php } ?>
+                                <?php if(isset($more_article_button)): 
+                                    $more_article_button_url = $more_article_button['url'];
+                                    $more_article_button_title = $more_article_button['title'];
+                                    $more_article_button_target = $more_article_button['target'] ? $link['target'] : '_self';
+                                    ?>
+                                    <div>
+                                        <a href=""></a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ............ News & Info section end ................ -->
 </main>
 
 <?php get_footer(); ?>

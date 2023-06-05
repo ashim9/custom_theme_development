@@ -17,8 +17,12 @@
                 </div>
             </div>
             <div class="footer-wrapper">
-                <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' )); ?>
-                <?php wp_nav_menu(array( 'theme_location' => 'footer-menu2')); ?>
+                <?php if(has_nav_menu('footer-menu')){ 
+                    wp_nav_menu( array( 'theme_location' => 'footer-menu' )); 
+                }?>
+                <?php if(has_nav_menu('footer-menu2')){
+                    wp_nav_menu( array( 'theme_location' => 'footer-menu2')); 
+                }?>
             </div>
     
             <?php if(isset($footer_sidebar)):  ?>
