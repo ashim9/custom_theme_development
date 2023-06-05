@@ -12,7 +12,9 @@ html, body, ul,li,p,h1,h2,h3 {
     box-sizing: border-box;
     font-family: 'Mulish';
 }
-
+li{
+    list-style: none;
+}
 /* .................... common styles start .....................  */
 a{
     text-decoration: none;
@@ -279,6 +281,13 @@ body .service-subtitle p{
 /* .................... loge service styles end .....................  */
 
 /* .................... our service styles start .....................  */
+body .our-service-section{
+    margin-bottom: 85px;
+}
+.our-service-section-wrappper{
+    width: 100%;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.08);
+}
 .our-service-section .our-service-title{
     margin: 87px 0 93px 0;
 }
@@ -341,6 +350,93 @@ body .our-service-card-wrapper,.our-service-section .service-subtitle {
 
 
 /* .................... Vehicle fleet styles end .......................  */
+
+/* .................... footer styles start .......................  */
+
+.footer .footer-contents {
+    display: flex;
+}
+.footer .footer-contents{
+    padding: 90px 0 112px 0;
+}
+.footer-contents .menu{
+    display: inline-block;
+}
+.footer-contents .footer-logos{
+    margin-right: 73px;
+}
+/* .footer .menu-footer-menu-container {
+    columns: 2;
+} */
+/* .footer-right-sidebar{
+    margin-left: 28px
+} */
+
+/* .footer-contents .footer-logos {
+    display: flex;
+    flex-direction: column;
+} */
+.footer-wrapper .menu-footer-menu-container {
+    max-width: 325px;
+    margin-right: 190px;
+}
+.footer-wrapper .menu-footer-menu-2-container {
+    max-width: 355px;
+    margin-right: 190px;
+}
+
+
+.footer-contents .social-icons a:not(:last-child){
+    margin-right: 25px;
+}
+.footer-contents .social-icons {
+    margin-top: 147px;
+}
+.footer .menu-footer-menu-container li a,.footer .menu-footer-menu-2-container li a{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+.footer .menu-footer-menu-container li,.footer .menu-footer-menu-2-container li{
+    margin-bottom: 22px;
+    /* margin-right: 182px;*/
+    display: inline-block; 
+}
+.footer-contents .footer-wrapper {
+    display: flex;
+    max-width: 686px;
+}
+.footer-right-sidebar h3{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+.footer-right-sidebar p{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #7F7F7F;
+    margin-bottom: 25px;
+}
+.footer-bottom{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: #7F7F7F;
+    padding-bottom: 29px;
+}
+
+/* .footer-wrapper .menu-footer-menu-container .menu li{
+    margin-right: 190px;
+}
+.footer-wrapper .menu-footer-menu-2-container .menu li{
+    margin-right: 210px;
+} */
+/* .................... footer styles end .........................  */
 
 
 
