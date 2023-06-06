@@ -275,15 +275,14 @@ get_header();
                                     $more_article_button_title = $more_article_button['title'];
                                     $more_article_button_target = $more_article_button['target'] ? $link['target'] : '_self';
                                     ?>
-                                    <div>
-                                        <a href=""></a>
+                                    <div class="more-article-btn">
+                                        <a href="<?php echo esc_url( $more_article_button_url ); ?>" target="<?php echo esc_attr( $more_article_button_target ); ?>"><?php echo esc_html( $more_article_button_title ); ?></a>
                                     </div>
                                 <?php endif; ?>
                             </div>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
-
             </div>
         </div>
     </div>

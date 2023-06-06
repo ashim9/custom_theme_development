@@ -39,7 +39,7 @@
             <?php endif; ?>
         </div>
         <div class="footer-bottom">
-            <p>&copy;Loge Service – 2022. All rights reserved.</p>
+            <p>&copy; Loge Service – 2022. All rights reserved.</p>
         </div>
     </div>
     
