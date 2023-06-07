@@ -313,6 +313,7 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
 }
 .service-card .service-card-contents{
     min-height: 170px;
+    margin-bottom: 10px;
 }
 .service-card .service-card-contents h3{ 
     font-weight: 400;
@@ -497,6 +498,54 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
 /* .................... footer styles end .........................  */
 
 
+/* .............. slider start ........................  */
+
+
+  /* the slides */
+.slick-slide:not(:first-child), .slick-slide:not(:last-child){
+    margin: 0 15px;
+}
+.service-card-wrapper  .slick-arrow{
+    z-index: 10;
+    transform: translate(0px, 100px);
+    width: 36px;
+    height: 36px;
+    background: #FCBF1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    position: absolute;
+}
+.left-arrow-wrapper{
+    left: -18px;
+}
+.right-arrow-wrapper {
+    right: -18px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -15px;
+}
+.slick-prev::before, .slick-next::before {
+    background: #000000;
+    border-radius: 100px;
+    color: #FCBF1B;
+}
+/* .our-service-section-wrappper .slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 10%;
+    width: 36px;
+    height: 36px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(45px, 50%);
+} */
+
+/* .............. slider end ..........................  */
+
 
 
 /* .................... media query start .....................  */
@@ -594,6 +643,10 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     }
     .footer .footer-contents {
         padding: 90px 0 87px 0;
+    }
+
+    .service-card-wrapper  .slick-arrow{
+        transform: translate(0px, 125px);
     }
 
 }
@@ -729,5 +782,37 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
         margin-right: 30px;
     } */
 
+    .service-card-wrapper .slick-slide:not(:first-child), .slick-slide:not(:last-child){
+        margin: 0;
+    }
+    .service-card-wrapper .slick-list{
+        margin: 0;
+    }
+    .service-card-wrapper  .slick-arrow{
+        width: 19px;
+        height: 19px;
+    }
+    .service-card-wrapper  .slick-arrow img{
+        width: 4.24px;
+        height: 7.43px;
+    }
+    .right-arrow-wrapper {
+        right: -10px;
+    }
+    .left-arrow-wrapper {
+        left: -10px;
+    }
 }
 
+
+@media only screen and (max-width: 430px) {
+    .service-card-wrapper .slick-arrow {
+        transform: translate(0px, 110px);
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .service-card-wrapper .slick-arrow {
+        transform: translate(0px, 100px);
+    }
+}

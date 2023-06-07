@@ -28,7 +28,7 @@ get_header();
     $more_article_button = get_field('more_article_button');
 ?>   
 <main>
-    <!-- ............ banner start ............  -->
+    <!-- .................... banner start ...................  -->
     <?php if(isset($home_banner_contents)):?>
         <div class="banner" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('<?php echo $home_banner_contents['home_banner'] ?>')no-repeat;background-size:cover">
             <div class="banner-contents">
@@ -137,37 +137,37 @@ get_header();
                             <span></span>
                             <p><?php echo $our_services_subtitle ?></p>
                         </div>
-                    <?php endif; ?>
+                    <?php endif; ?> 
                 </div>
                 <?php if(isset($services_card)): ?>
-                    <div class="service-card-wrapper">
-                        <?php foreach($services_card as $services_cards) {?>
-                             <div class="service-card">
-                                <?php if(isset($services_cards['services_card_image'])): ?>
-                                    <div class="service-card-img">
-                                        <img src="<?php echo $services_cards['services_card_image']; ?>" alt="">
-                                    </div>
-                                <?php endif; ?>
-                                <div class="service-card-contents">
-                                    <?php if(isset($services_cards['services_card_title'])): ?>
-                                        <h3><?php echo $services_cards['services_card_title']; ?></h3>
-                                    <?php endif; ?>
-                                    <?php if(isset($services_cards['services_card_subtitle'])): ?>
-                                        <p><?php echo $services_cards['services_card_subtitle']; ?></p>
-                                    <?php endif; ?>
-                                    <?php if($services_cards['services_card_btn']): 
-                                        $our_services_link_url = $services_cards['services_card_btn']['url'];
-                                        $our_services_link_title = $services_cards['services_card_btn']['title'];
-                                        $our_services_link_target = $services_cards['services_card_btn']['target'] ? $services_cards['services_card_btn']['target'] : '_self';
-                                        ?>
-                                        <div class="service-btn">
-                                            <a href="<?php echo esc_url( $our_services_link_url ); ?>" target="<?php echo esc_attr( $our_services_link_target ); ?>"><?php echo esc_html( $our_services_link_title ); ?></a>
-                                        </div>
-                                    <?php endif; ?>
+                    <div class="service-card-wrapper homeSlider">
+                            <?php foreach($services_card as $services_cards) {?>
+                                <div class="service-card">
+                                   <?php if(isset($services_cards['services_card_image'])): ?>
+                                       <div class="service-card-img">
+                                           <img src="<?php echo $services_cards['services_card_image']; ?>" alt="">
+                                       </div>
+                                   <?php endif; ?>
+                                   <div class="service-card-contents">
+                                       <?php if(isset($services_cards['services_card_title'])): ?>
+                                           <h3><?php echo $services_cards['services_card_title']; ?></h3>
+                                       <?php endif; ?>
+                                       <?php if(isset($services_cards['services_card_subtitle'])): ?>
+                                           <p><?php echo $services_cards['services_card_subtitle']; ?></p>
+                                       <?php endif; ?>
+                                       <?php if($services_cards['services_card_btn']): 
+                                           $our_services_link_url = $services_cards['services_card_btn']['url'];
+                                           $our_services_link_title = $services_cards['services_card_btn']['title'];
+                                           $our_services_link_target = $services_cards['services_card_btn']['target'] ? $services_cards['services_card_btn']['target'] : '_self';
+                                           ?>
+                                           <div class="service-btn">
+                                               <a href="<?php echo esc_url( $our_services_link_url ); ?>" target="<?php echo esc_attr( $our_services_link_target ); ?>"><?php echo esc_html( $our_services_link_title ); ?></a>
+                                           </div>
+                                       <?php endif; ?>
+                                   </div>
                                 </div>
-                             </div>
-                        <?php } ?>
-                    </div>
+                            <?php } ?>
+                        </div>
                 <?php endif; ?>
             </div>
         </div>
@@ -190,7 +190,7 @@ get_header();
                 <?php endif; ?>
             </div>
             <?php if(isset($vehicle_fleet_services_card)): ?>
-                <div class="service-card-wrapper">
+                <div class="service-card-wrapper homeSlider1">
                     <?php foreach($vehicle_fleet_services_card as $vehicle_fleet_services_cards) {?>
                     <div class="service-card">
                             <?php if(isset($vehicle_fleet_services_cards['vehicle_fleet_services_card_image'])): ?>

@@ -44,3 +44,37 @@
     </div>
     
 </div>
+
+
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+ <!-- <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery-3.2.1.slim.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+<!-- <script src="<?php //echo get_bloginfo('template_directory'); ?>/assets/js/popper.min.js"></script> -->
+
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+    $('.homeSlider,.homeSlider1').slick({
+        prevArrow:`<div class="left-arrow-wrapper slider-arrow"><img class="left-arrow" src="<?php echo esc_url(get_template_directory_uri().'/assets/img/slick-left-arrow.svg') ?>" alt="left-arrow"></div>`,
+        nextArrow:`<div class="right-arrow-wrapper slider-arrow"><img class="right-arrow" src="<?php echo esc_url(get_template_directory_uri().'/assets/img/slick-right-arrow.svg') ?>" alt="right-arrow"></div>`,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+    });
+</script>

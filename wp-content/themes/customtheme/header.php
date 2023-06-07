@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/slick.css">
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/slick-theme.css"> 
+
+
     <?php wp_head(); ?>
 </head>
 <body>

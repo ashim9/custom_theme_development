@@ -12,6 +12,16 @@ add_action( 'init', 'register_menus' );
 
 function wp_register_styles(){
     wp_enqueue_style('stylesheet', get_template_directory_uri() . "./style.css", 'all');
+    // wp_enqueue_style('slick', get_template_directory_uri() . "./assets/css/slick.css", 'all');
+    // wp_enqueue_style('slick-theme', get_template_directory_uri() . "./assets/css/slick-theme.css", 'all');
+    // wp_enqueue_script('slick-js',get_template_directory_uri() .'./assets/js/slick.min.js', true);
+
+    // wp_enqueue_style( 'slick-css', untrailingslashit( get_template_directory_uri() ) . './assets/css/slick.css', [], false, 'all' );
+    // wp_enqueue_style( 'slick-theme-css', untrailingslashit( get_template_directory_uri() ) . './assets/css/slick-theme.css', ['slick-css'], false, 'all' );
+    // wp_enqueue_script('slick-js',get_template_directory_uri() .'./assets/js/jquery-1.11.0.min.js', array(), '1.11.0');
+
+    
+    // wp_enqueue_script( 'carousel-js', untrailingslashit( get_template_directory_uri() ) . '.assets/js/jquery-1.11.0.min.js', ['jquery', 'slick-js'], filemtime( untrailingslashit( get_template_directory() ) . '.assets/js/jquery-1.11.0.min.js' ), true );
 }
 add_action('wp_enqueue_scripts', 'wp_register_styles');
 
@@ -26,6 +36,9 @@ if( function_exists('acf_add_options_page') ) {
     ));
 }
 
+if ( file_exists( dirname( __FILE__ ) . '/custom-post-type/cpt-common-breadcrumb.php' )) {
+    require_once dirname( __FILE__ ) . '/custom-post-type/cpt-common-breadcrumb.php';
+}
 
 //enable svg uploading
 // Wp v4.7.1 and higher
