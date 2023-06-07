@@ -17,11 +17,11 @@
                 </div>
             </div>
             <div class="footer-wrapper">
-                <?php if(has_nav_menu('footer-menu')){ 
-                    wp_nav_menu( array( 'theme_location' => 'footer-menu' )); 
+                <?php if(has_nav_menu('footer-menu')){
+                    wp_nav_menu( array( 'theme_location' => 'footer-menu' ));
                 }?>
                 <?php if(has_nav_menu('footer-menu2')){
-                    wp_nav_menu( array( 'theme_location' => 'footer-menu2')); 
+                    wp_nav_menu( array( 'theme_location' => 'footer-menu2'));
                 }?>
             </div>
     
@@ -39,7 +39,7 @@
             <?php endif; ?>
         </div>
         <div class="footer-bottom">
-            <p>&copy; Loge Service – 2022. All rights reserved.</p>
+            <p>&copy; Loge Service - 2022. All rights reserved.</p>
         </div>
     </div>
     
@@ -53,28 +53,81 @@
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 
-<script type="text/javascript">
-    $('.homeSlider,.homeSlider1').slick({
-        prevArrow:`<div class="left-arrow-wrapper slider-arrow"><img class="left-arrow" src="<?php echo esc_url(get_template_directory_uri().'/assets/img/slick-left-arrow.svg') ?>" alt="left-arrow"></div>`,
-        nextArrow:`<div class="right-arrow-wrapper slider-arrow"><img class="right-arrow" src="<?php echo esc_url(get_template_directory_uri().'/assets/img/slick-right-arrow.svg') ?>" alt="right-arrow"></div>`,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
+<script>
+    // $(document).ready(function(){
+    //     $('.bannerSlider').slick({
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1,
+    //         infinite: true,
+    //         dots: true;
+    //     });
+
+    //     $('.homeSlider,.homeSlider1').slick({
+    //         prevArrow:`<div class="left-arrow-wrapper slider-arrow"><img class="left-arrow" src="<?php echo esc_url(get_template_directory_uri().'/assets/img/slick-left-arrow.svg') ?>" alt="left-arrow"></div>`,
+    //         nextArrow:`<div class="right-arrow-wrapper slider-arrow"><img class="right-arrow" src="<?php echo esc_url(get_template_directory_uri().'/assets/img/slick-right-arrow.svg') ?>" alt="right-arrow"></div>`,
+    //         slidesToShow: 3,
+    //         slidesToScroll: 1,
+    //         infinite: true,
+    //         responsive: [
+    //             {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 1,
+    //             }
+    //             },
+    //             {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1
+    //             }
+    //             }
+    //         ]
+    //     });
+    // });
+
+
+</script>
+
+<script>
+    $(document).ready(function(){
+        homeSlider('.bannerSlider');
+        slickSlider('.homeSlider');
+        slickSlider('.homeSlider1');
     });
+    function homeSlider(param){
+        $(param).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true
+        });
+    }
+    function slickSlider(param){
+        $(param).slick({
+            prevArrow:`<div class="left-arrow-wrapper slider-arrow"><img class="left-arrow" src="<?php echo esc_url(get_template_directory_uri().'/assets/img/slick-left-arrow.svg') ?>" alt="left-arrow"></div>`,
+            nextArrow:`<div class="right-arrow-wrapper slider-arrow"><img class="right-arrow" src="<?php echo esc_url(get_template_directory_uri().'/assets/img/slick-right-arrow.svg') ?>" alt="right-arrow"></div>`,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+                },
+                {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        });
+    }
+
+
 </script>

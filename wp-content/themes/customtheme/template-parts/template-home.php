@@ -14,6 +14,8 @@ get_header();
     $loge_service_card = get_field('loge_service_card');
     $loge_service_right_options = get_field('loge_service_right_options');
 
+    $home_banner_background_img = get_field('home_banner_background_img');
+
     $our_services_title = get_field('our_services_title');
     $our_services_subtitle = get_field('our_services_subtitle');
     $services_card = get_field('services_card');
@@ -30,25 +32,32 @@ get_header();
 <main>
     <!-- .................... banner start ...................  -->
     <?php if(isset($home_banner_contents)):?>
-        <div class="banner" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('<?php echo $home_banner_contents['home_banner'] ?>')no-repeat;background-size:cover">
-            <div class="banner-contents">
-                <?php if(isset($home_banner_contents['home_banner_header'])): ?>
-                    <h2><?php echo $home_banner_contents['home_banner_header'] ?></h2>
-                <?php endif; ?>
-                <?php if(isset($home_banner_contents['home_banner_subheader'])): ?>
-                    <p><?php echo $home_banner_contents['home_banner_subheader'] ?></p>
-                <?php endif; ?>
-                <?php if( $home_banner_contents['home_banner_btn_text'] ):
-                        $link_url = $home_banner_contents['home_banner_btn_text']['url'];
-                        $link_title = $home_banner_contents['home_banner_btn_text']['title'];
-                        $link_target = $home_banner_contents['home_banner_btn_text']['target'] ? $link['target'] : '_self';
-                    ?>
-                    <div class="banner-btn">
-                        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+        <div class="banner-wrapper">
+            <?php if(isset($home_banner_contents['home_banner_background_img'])): ?>
+                <?php foreach($home_banner_contents['home_banner_background_img'] as $home_banner) {?>
+                    <div class="banner" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('<?php echo $home_banner['home_banner'] ?>')no-repeat;background-size:cover">
+                <?php } ?>
+            <?php endif ?>
+                    <div class="banner-contents">
+                        <?php if(isset($home_banner_contents['home_banner_header'])): ?>
+                            <h2><?php echo $home_banner_contents['home_banner_header'] ?></h2>
+                        <?php endif; ?>
+                        <?php if(isset($home_banner_contents['home_banner_subheader'])): ?>
+                            <p><?php echo $home_banner_contents['home_banner_subheader'] ?></p>
+                        <?php endif; ?>
+                        <?php if( $home_banner_contents['home_banner_btn_text'] ):
+                                $link_url = $home_banner_contents['home_banner_btn_text']['url'];
+                                $link_title = $home_banner_contents['home_banner_btn_text']['title'];
+                                $link_target = $home_banner_contents['home_banner_btn_text']['target'] ? $link['target'] : '_self';
+                            ?>
+                            <div class="banner-btn">
+                                <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                <?php endif; ?>
-            </div>
+                </div>
         </div>
+       
         <div class="phone-banner" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('<?php echo $home_banner_contents['home_banner_phone'] ?>')no-repeat;background-size:cover">
             <div class="banner-contents">
                 <?php if(isset($home_banner_contents['home_banner_header'])): ?>
@@ -145,7 +154,7 @@ get_header();
                                 <div class="service-card">
                                    <?php if(isset($services_cards['services_card_image'])): ?>
                                        <div class="service-card-img">
-                                           <img src="<?php echo $services_cards['services_card_image']; ?>" alt="">
+                                           <img src="<?php echo $services_cards['services_card_image']; ?>" alt="card_image">
                                        </div>
                                    <?php endif; ?>
                                    <div class="service-card-contents">
@@ -155,7 +164,7 @@ get_header();
                                        <?php if(isset($services_cards['services_card_subtitle'])): ?>
                                            <p><?php echo $services_cards['services_card_subtitle']; ?></p>
                                        <?php endif; ?>
-                                       <?php if($services_cards['services_card_btn']): 
+                                       <?php if($services_cards['services_card_btn']):
                                            $our_services_link_url = $services_cards['services_card_btn']['url'];
                                            $our_services_link_title = $services_cards['services_card_btn']['title'];
                                            $our_services_link_target = $services_cards['services_card_btn']['target'] ? $services_cards['services_card_btn']['target'] : '_self';

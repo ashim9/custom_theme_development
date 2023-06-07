@@ -489,19 +489,68 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     padding-bottom: 29px;
 }
 
-/* .footer-wrapper .menu-footer-menu-container .menu li{
-    margin-right: 190px;
-}
-.footer-wrapper .menu-footer-menu-2-container .menu li{
-    margin-right: 210px;
-} */
 /* .................... footer styles end .........................  */
+
+/* .............. about page start ........................  */
+.about-us-first-column-three-row {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+/* .about-us-first-column-first-row,.about-us-first-column-second-row,.about-us-first-column-third-row{
+    flex: 1;
+} */
+.about-us-first-column-first-row p:nth-child(1){
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29px;
+    color: #222222;
+}
+.about-us-first-column-first-row p:nth-child(2){
+    margin: 31px 0 20px 0;
+}
+.about-us-first-column-first-row p:not(:first-child){
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7F7F7F;
+}
+.about-us-first-column-first-row{ 
+    max-width: 368px;
+    display: flex;
+    flex-direction: column;
+}
+.about-us-first-column-second-row{ 
+    min-width: 259px;
+    margin: 0 143px 0 102px;
+    display: flex;
+    flex-direction: column;
+}
+.about-us-first-column-second-row p:nth-child(1){
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: #FCBF1B;
+    margin-bottom: 42px;
+}
+.about-us-first-column-second-row p:not(:first-child){
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #222222;
+    margin-bottom: 17px;
+}
+.about-us-first-column-third-row{
+    display: flex;
+    flex-direction: column;
+}
+/* .............. about page end ..........................  */
+
+
 
 
 /* .............. slider start ........................  */
 
-
-  /* the slides */
+/* the slides */
 .slick-slide:not(:first-child), .slick-slide:not(:last-child){
     margin: 0 15px;
 }
@@ -516,6 +565,7 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     align-items: center;
     border-radius: 100px;
     position: absolute;
+    cursor: pointer;
 }
 .left-arrow-wrapper{
     left: -18px;
@@ -649,6 +699,10 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
         transform: translate(0px, 125px);
     }
 
+    .about-us-first-column-second-row{ 
+        margin: 0 25px;
+    }
+
 }
 
 
@@ -706,6 +760,7 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     }
     body  .service-subtitle p{
         font-size: 14px;
+        line-height: 18px;
     }
     body .loge-service-title {
         margin-bottom: 40px;
@@ -802,6 +857,38 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     .left-arrow-wrapper {
         left: -10px;
     }
+
+
+    /* ............................ about page start ............................  */
+    .about-us-first-column-three-row{
+        flex-direction: column;
+    }
+    .about-us-first-column-third-row img{
+        width: 100%;
+    }
+    .about-us-first-column-second-row {
+        margin: 0;
+    }
+    .about-us-first-column-first-row { 
+        order: 2;
+        margin: 20px 0 30px 0;
+    }
+    .about-us-first-column-second-row {
+         order: 3;
+    }
+    .about-us-first-column-third-row {
+        order: 1;
+    }
+    .about-us-first-column-first-row p:nth-child(2) {
+        margin: 20px 0;
+    }
+    .about-us-first-column-second-row p:not(:first-child) {
+        margin-bottom: 17px;
+    }
+    body .loge-service-section-wrapper .about-us-first-column {
+        margin: 50px 0 32px 0;
+    }
+    /* ............................ about page end ..............................  */
 }
 
 
