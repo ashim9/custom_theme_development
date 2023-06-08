@@ -95,6 +95,7 @@
         homeSlider('.bannerSlider');
         slickSlider('.homeSlider');
         slickSlider('.homeSlider1');
+        aboutPageLogoSlider('.logoSlider');
     });
     function homeSlider(param){
         $(param).slick({
@@ -122,6 +123,40 @@
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        });
+    }
+
+
+    function aboutPageLogoSlider(param){
+        $(param).slick({
+            prevArrow:`<div class="left-arrow-wrapper slider-arrow"><img class="left-arrow" src="<?php echo get_template_directory_uri().'/assets/img/slick-left-arrow.svg' ?>" alt="left-arrow"></div>`,
+            nextArrow:`<div class="right-arrow-wrapper slider-arrow"><img class="right-arrow" src="<?php echo get_template_directory_uri().'/assets/img/slick-right-arrow.svg' ?>" alt="right-arrow"></div>`,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true,
+            responsive: [
+                {
+                breakpoint: 1240,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+                },
+                {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2
+                }
+                },
+                {
+                breakpoint: 430,
+                settings: {
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
                 }

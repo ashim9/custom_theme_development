@@ -567,6 +567,18 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     line-height: 24px;
     color: #7F7F7F;
 }
+.about-us-third-column .logos-wrapper {
+    display: flex;
+}
+.about-us-third-column .logos-wrapper .logo:not(:last-child) {
+    margin-right: 30px;
+}
+.about-us-second-column .service-subtitle span {
+    height: 62px;
+}
+.about-us-second-column .loge-service-title h3{
+    min-width: 293px;
+}
 /* .............. about page end ..........................  */
 
 
@@ -578,7 +590,7 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
 .slick-slide:not(:first-child), .slick-slide:not(:last-child){
     margin: 0 15px;
 }
-.service-card-wrapper  .slick-arrow{
+.service-card-wrapper .slick-arrow, .logos-wrapper .slick-arrow{
     z-index: 10;
     transform: translate(0px, 100px);
     width: 36px;
@@ -591,6 +603,9 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     position: absolute;
     cursor: pointer;
 }
+.about-us-third-column .logos-wrapper .slick-arrow{
+    transform: translate(0px,44px);
+}
 .left-arrow-wrapper{
     left: -18px;
 }
@@ -601,11 +616,11 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
 .slick-list {
     margin: 0 -15px;
 }
-.slick-prev::before, .slick-next::before {
+/* .slick-prev::before, .slick-next::before {
     background: #000000;
     border-radius: 100px;
     color: #FCBF1B;
-}
+} */
 /* .our-service-section-wrappper .slick-prev, .slick-next {
     font-size: 0;
     line-height: 0;
@@ -870,11 +885,11 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     .service-card-wrapper .slick-list{
         margin: 0;
     }
-    .service-card-wrapper  .slick-arrow{
+    .service-card-wrapper  .slick-arrow, .about-us-third-column .slick-arrow{
         width: 19px;
         height: 19px;
     }
-    .service-card-wrapper  .slick-arrow img{
+    .service-card-wrapper  .slick-arrow img,.about-us-third-column .slick-arrow img{
         width: 4.24px;
         height: 7.43px;
     }
@@ -913,16 +928,31 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
         margin-bottom: 17px;
     }
 
-    body .loge-service-section-wrapper .about-us-first-column {
+    body div.about-us-first-column {
         margin: 50px 0 32px 0;
     }
-    div.loge-service-section-wrapper .about-us-second-column .why-choose-contents {
-        margin: 0 0 40px 15px;
+    body div.about-us-second-column .why-choose-contents {
+        margin: 0 0 40px 15px !important;
     }
     .about-us-second-column .why-choose-contents{
         max-width: 100%;
     }
-    /* ............................ about page end ..............................  */
+    .about-us-third-column .logos-wrapper {
+        padding: 0 20px;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .about-us-third-column .logos-wrapper .slick-slide.slick-active:last-child{
+        margin-right: 0px;
+    }
+    .about-us-third-column .logos-wrapper .slick-arrow {
+        transform: translate(0px,26px);
+    }
+    body .about-us-third-column {
+        margin: 70px 0;
+    }
+    /* ............................ about page end ...........zz...................  */
 }
 
 
@@ -930,10 +960,31 @@ body .service-card-wrapper,.our-service-section .service-subtitle {
     .service-card-wrapper .slick-arrow {
         transform: translate(0px, 110px);
     }
+    .about-us-third-column .logos-wrapper .slick-arrow {
+        transform: translate(0px,35px);
+    }
+    .about-us-third-column .logos-wrapper .logo:not(:last-child) {
+        margin-right: 10px;
+    }
+    .logo img{
+        width: 100%;
+    }
+    body .loge-service-section-wrapper .about-us-third-column .logos-wrapper .logo.slick-current{
+        margin-right: 20px;
+    }
+    body .loge-service-section-wrapper .about-us-third-column .slick-list {
+        margin-right: -20px;
+    }
 }
 
 @media only screen and (max-width: 390px) {
     .service-card-wrapper .slick-arrow {
         transform: translate(0px, 100px);
+    }
+    .loge-service-section-wrapper .about-us-third-column  .right-arrow-wrapper {
+        right: -8px;
+    }
+    .loge-service-section-wrapper .about-us-third-column  .left-arrow-wrapper {
+        left: -8px;
     }
 }

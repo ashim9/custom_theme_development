@@ -11,7 +11,7 @@ get_header();
     $about_page_loge_service = get_field('about_page_loge_service');
     $loge_service_title = get_field('loge_service_title');
     $about_page_why_choose = get_field('about_page_why_choose');
-    // var_dump($about_page_loge_service['loge_service_second_column']);
+    $about_page_our_partners = get_field('about_page_our_partners');
 ?>
 
 <main>
@@ -61,7 +61,7 @@ get_header();
         </div>
     <?php endif; ?>
     <?php if(isset($about_page_why_choose)):  ?>
-        <div class="loge-service-section-wrapper">
+        <div class="">
             <div class="loge-service-section about-us-second-column">
                 <div class="container">
                     <div class="loge-service-title">
@@ -89,5 +89,32 @@ get_header();
             </div>
         </div>
     <?php endif; ?>
+    <?php if(isset($about_page_our_partners)): ?>
+        <div class="loge-service-section about-us-third-column">
+            <div class="container">
+                <div class="loge-service-title">
+                    <?php if(isset($about_page_our_partners['our_partners_title'])):?>
+                        <h3><?php echo $about_page_our_partners['our_partners_title'] ?></h3>
+                    <?php endif; ?>
+                    <?php if(isset($about_page_our_partners['our_partners_subtitle'])): ?>
+                        <div class="service-subtitle">
+                            <span></span>
+                            <p><?php echo $about_page_our_partners['our_partners_subtitle'] ?></p>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <?php if(isset($about_page_our_partners['partners_logos'])) ?>
+                <div class="logos-wrapper logoSlider">
+                    <?php foreach($about_page_our_partners['partners_logos'] as $logos) {?>
+                        <div class="logo">
+                            <img src="<?php echo $logos['partner_logo'] ?>" alt="partner logo">
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+     <?php endif; ?>
 
 </main>
+
+<?php get_footer(); ?>
