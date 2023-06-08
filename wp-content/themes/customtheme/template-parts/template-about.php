@@ -75,6 +75,16 @@ get_header();
                             </div>
                         <?php endif; ?>
                     </div>
+                    <?php if(isset($about_page_why_choose['why_choose_text_group'])):?>
+                        <div class="why-choose-text-wrapper">
+                            <?php foreach($about_page_why_choose['why_choose_text_group'] as $about_page_why_choose_contents) {?>
+                                <div class="why-choose-contents">
+                                    <h3><?php echo $about_page_why_choose_contents['why_choose_text_group_title'] ?></h3>
+                                    <p><?php echo $about_page_why_choose_contents['why_choose_text_group_subtitle'] ?></p>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
